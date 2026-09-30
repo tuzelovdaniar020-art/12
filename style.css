@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Жарқын әрі айқын оқу құралдары (дәптер, қалам, кеңсе тауарлары) фоны */
+    background: url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Фондағы сурет анық көрініп, мәтін де оқылуы үшін жұмсақ ақшыл қабат */
+    background-color: rgba(255, 255, 255, 0.75); 
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 850px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #1e3799;
+    margin-bottom: 20px;
+}
+
+.form-section, .controls-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.controls-section {
+    background-color: #f1f2f6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.form-section input, .controls-section input {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ced6e0;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 180px;
+    background-color: #ffffff;
+}
+
+.form-section button {
+    padding: 12px 20px;
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.form-section button:hover {
+    background-color: #0779cc;
+}
+
+.excel-btn {
+    padding: 12px 15px;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.excel-btn:hover {
+    background-color: #00a886;
+}
+
+.clear-btn {
+    padding: 12px 15px;
+    background-color: #ff7675;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.clear-btn:hover {
+    background-color: #d63031;
+}
+
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.table-section th, .table-section td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #dfe4ea;
+}
+
+.table-section th {
+    background-color: #6c5ce7;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.table-section tr:hover {
+    background-color: #f1f2f6;
+    color: #2d3436;
+}
+
+.delete-btn {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background-color: #ff6b81;
+}
+
+.stats-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffeaa7;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    color: #2d3436;
+    border: 1px solid #fdcb6e;
+}
+
+.stats-section span {
+    color: #d35400;
+    font-size: 1.2em;
+}
