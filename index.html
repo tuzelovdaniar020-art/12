@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн Бағалау және Табель Жүйесі</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SheetJS (Excel жасауға арналған кітапхана) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>📚 Онлайн Бағалау Жүйесі</h1>
+        
+        <div class="form-section">
+            <h2>Оқушы қосу / Бағалау</h2>
+            <input type="text" id="studentName" placeholder="Оқушының аты-жөні">
+            <input type="text" id="subjectName" placeholder="Пән атауы">
+            <input type="number" id="gradeInput" min="1" max="10" placeholder="Баға (1-10 аралығында)">
+            <button onclick="addGrade()">Бағаны сақтау</button>
+        </div>
+
+        <div class="controls-section">
+            <input type="text" id="searchInput" placeholder="Оқушы немесе пән бойынша іздеу..." onkeyup="filterTable()">
+            <!-- Excel-ге жүктеу батырмасы -->
+            <button onclick="exportToExcel()" class="excel-btn">Excel-ге жүктеу 📊</button>
+            <button onclick="clearAllData()" class="clear-btn">Барлығын тазарту</button>
+        </div>
+
+        <div class="table-section">
+            <h2>Оқушылар Табелі</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Аты-жөні</th>
+                        <th>Пән</th>
+                        <th>Баға (1-10)</th>
+                        <th>Деңгей / Статус</th>
+                        <th>Әрекет</th>
+                    </tr>
+                </thead>
+                <tbody id="gradeTableBody">
+                    <!-- JavaScript арқылы қосылады -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="stats-section" id="statsSection"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
